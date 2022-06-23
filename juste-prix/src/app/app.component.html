@@ -1,0 +1,4 @@
+<div class="container mt-5">
+  <app-partie1 *ngIf="objet.name==''"></app-partie1>
+  <app-partie2 *ngIf="objet.name!=''" [objet]="objet"></app-partie2>
+</div>

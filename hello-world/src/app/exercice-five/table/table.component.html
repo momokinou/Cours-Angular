@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Marque</th>
+        <th scope="col">Modèle</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of cars">
+        <th scope="row">{{car.id}}</th>
+        <td>{{car.model}}</td>
+        <td>{{car.brand}}</td>
+        <td>
+          <button
+            class="btn btn-primary"
+            (click)="onClickShowCarCard(car.id)"
+          >
+            VOIR
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

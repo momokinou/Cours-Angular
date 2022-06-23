@@ -1,0 +1,13 @@
+<div class="card text-center">
+  <div class="card-header">
+    {{objet.name}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{indication}}</h5>
+    <input type="number" class="input w-50" placeholder="Prix de l'objet" [(ngModel)]="prix" />
+    <button class="btn btn-dark ms-3" class="btn btn-primary" *ngIf="fin" (click)="onClickIncrementAndCheckValue()">Valider</button>
+  </div>
+  <div class="card-footer text-muted">
+    Nombre d'essais {{nbrEssais}}
+  </div>
+</div>

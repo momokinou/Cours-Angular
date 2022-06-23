@@ -1,0 +1,14 @@
+<div class="card text-center">
+    <div class="card-header">
+      Création de l'objet à trouver
+    </div>
+    <div class="card-body">
+      <input type="text" class="input w-50" placeholder="Nom de l'objet"
+        [(ngModel)]="objet.name" />
+        <p></p>
+      <input type="number" class="input w-50" placeholder="Prix de l'objet"
+        [(ngModel)]="objet.prix" />
+        <p></p>
+        <button class="btn btn-dark ms-3" class="btn btn-primary" *ngIf="objet.name && objet.prix" (click)="onClickSave()" >Jouer</button>
+    </div>
+  </div>

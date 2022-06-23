@@ -1,0 +1,24 @@
+<div class="row" *ngIf="!(joueur1Saved && joueur2Saved)">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Joueur 1</h5>
+        <input type="text" class="input w-50" placeholder="Rentrer le nom du joueur 1" [disabled]="joueur1Saved"
+          [(ngModel)]="joueur1" />
+        <button class="btn btn-dark ms-3" class="btn btn-primary" (click)="onClickSavePlayerOne()">Valider</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Joueur 2</h5>
+        <input type="text" class="input w-50" placeholder="Rentrer le nom du joueur 2" [disabled]="joueur2Saved"
+          [(ngModel)]="joueur2" />
+        <button class="btn btn-dark ms-3" class="btn btn-primary" (click)="onClickSavePlayerTwo()">Valider</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-partie1-objet *ngIf="joueur1Saved && joueur2Saved"></app-partie1-objet>

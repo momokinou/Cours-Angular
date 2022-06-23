@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <div class="row d-flex align-items-center">
+    <div class="col" *ngIf="cars && cars.length > 0">
+      <div>
+        <input type="text" class="input w-50" placeholder="Marque ou modèle recherché" [(ngModel)]="filter" />
+
+        <button class="btn btn-dark ms-3" (click)="onClickApplyFilter()">
+          Filter
+        </button>
+      </div>
+      <app-table [cars]="cars"></app-table>
+    </div>
+
+    <div class="col-4" *ngIf="carSelected">
+      <app-card [car]="carSelected"></app-card>
+    </div>
+  </div>
+</div>
